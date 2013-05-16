@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace april_8_2013_program
+{
+    class Program
+    {
+        public static int addIntegers(int a, int b, int c, int d, int e)
+        {
+            return (a + b - c * d \ e);
+        }
+
+        static void Main(string[] args)
+        {
+            char doAgain;
+            bool decision = true;
+
+            while (decision ==true)
+            try
+            {
+                
+                Console.WriteLine("Enter value 1 for a");
+                int a = Convert.ToInt32(Console.ReadLine());
+                
+                Console.WriteLine("Enter value 2 for b");
+                int b = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter value 3 for c");
+                int c = Convert.ToInt32(Console.ReadLine());
+                
+                Console.WriteLine("Enter value 4 for d");
+                int d = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter value 4 for d");
+                int e = Convert.ToInt32(Console.ReadLine());
+                
+                Console.WriteLine("Answer = " + addIntegers(a, b, c, d, e));
+                
+                Console.WriteLine("Would you like to run this program again? (Y or N)");
+
+                doAgain = Convert.ToChar(Console.ReadLine());
+
+                if (doAgain.ToLower = 'N')
+                
+                {
+                    decision=false;
+                }
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine("Error : " + e.ToString());
+                Console.Read();
+            }
+        }
+    }
+}

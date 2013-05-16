@@ -1,0 +1,60 @@
+		//Assign "New Companies Page"
+		#region "New company page"
+
+       	//NewCompanyPageLabelNameInput id="company_name"
+        
+        [FindsBy(How = How.Id, Using = "company_name")]
+        [CacheLookup]
+        private IWebElement _NewCompanyPageLabelNameInput;
+
+        public void NewCompanyPageLabelNameInput(string name)
+        {
+            _NewCompanyPageLabelNameInput.SendKeys(name);
+        }
+
+        add search here
+
+        //NewCompanySelectPackersSelect id ="companyms2side__sx"
+       
+        [FindsBy(How = How.Id, Using = "companyms2side__sx")]
+        [CacheLookup]
+        private IWebElement _NewCompanySelectPackersSelect;
+
+        public void NewCompanySelectPackersSelect(string selectpackers)
+        {
+            _NewCompanySelectPackersSelect.SendKeys(selectpackers);
+        }
+
+        //NewCompanyAddOnePClass ="AddOne"
+
+        [FindsBy(How = How.ClassName, Using = "AddOne")]
+        [CacheLookup]
+        private IWebElement _NewCompanyAddOnePClass;
+
+        public void NewCompanyAddOnePClassClick()
+        {
+            _NewCompanyAddOnePClass.Click();
+        }
+
+        //NewCompanyDescriptiontextarea id ="company_description"
+       
+        [FindsBy(How = How.Id, Using = "company_description")]
+        [CacheLookup]
+        private IWebElement _NewCompanyDescriptiontextarea;
+
+        public void NewCompanyDescriptiontextarea(string companydescription)
+        {
+            _NewCompanyDescriptiontextarea.SendKeys(companydescription);
+        }
+
+        //NewCompanyCreateButtonInput Class ="btn btn btn-success"
+
+        [FindsBy(How = How.ClassName, Using = "btn btn btn-success")] 
+        [CacheLookup] 
+        private IWebElement _NewCompanyCreateButtonInput;
+        public void NewCompanyCreateButtonInputClick()
+        {
+            _NewCompanyCreateButtonInput.Click();
+        }
+
+        #endregion

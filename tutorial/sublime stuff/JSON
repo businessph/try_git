@@ -1,0 +1,21 @@
+            string model = "Honda";
+            string make = "S2000";
+            string driver = "ph";
+            string driver2 = "OLEG";
+            string yottamark = 2013 Holiday Schedule
+
+            Console.WriteLine(model);
+            Console.WriteLine(make);
+            Console.WriteLine(driver);
+            Console.WriteLine(driver2);
+            Console.WriteLine(yottamark);
+
+            Console.WriteLine("Hello: {0}", make);
+
+            Console.WriteLine("Ph likes: {2}", driver2);
+            Console.WriteLine("Gets Number of character: {0}", model.IndexOf("b"));
+            Console.WriteLine(model.ToLower());
+            Console.WriteLine(model.Contains("a"));
+            Console.WriteLine("String Contains Honda" + model.Contains("Honda"));
+            Console.WriteLine("Position of Honda string # " + model.IndexOf("Honda"));
+            Console.WriteLine(driver2.ToLower());

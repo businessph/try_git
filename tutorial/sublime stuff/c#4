@@ -1,0 +1,90 @@
+using System;
+
+namespace MethodsPractice
+{
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            int tUnits, gUnits, solution = 0;
+            char operation, doAgain;
+            string operationType = "";
+            bool decision1 = true, decision2;
+
+            while (decision1)
+            {
+                decision2 = true;
+                Console.WriteLine("Please enter the total number of units (the 'n' in nPr)");
+                tUnits = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Please enter the grouping of units from the total (the 'r' in nPr)");
+                gUnits = Convert.ToInt32(Console.ReadLine());
+
+                while (decision2)
+                {
+                    Console.WriteLine(
+                        "Would you like to do a combination or permutation(P = permutation, C = combination)");
+                    operation = Convert.ToChar(Console.ReadLine());
+
+                    if (operation == 'p' || operation == 'P')
+                    {
+                        solution = permute(tUnits, gUnits);
+                        decision2 = false;
+                        operationType = "permutation";
+                    }
+                    else if (operation == 'c' || operation == 'C')
+                    {
+                        solution = combine(tUnits, gUnits);
+                        decision2 = false;
+                        operationType = "combination";
+                    }
+                    else
+                    {
+                        Console.WriteLine(
+                            "I am sorry, the choice you entered is invalid.  Please go back to re-enter your choice.");
+                    }
+                }
+                Console.WriteLine("The solution to you " + operationType + "is: " + solution + ".");
+                Console.ReadLine();
+                Console.WriteLine("Would you like to run this program again? (Y or N)");
+
+                if(doAgain != 'y' || doAgain != 'Y')
+
+                {
+                    decision1 = false;
+                }
+            }
+        }
+        public static int permute(int a, int b)
+        {
+            int total, solution = 1;
+
+            total = a - b;
+
+            for (int temp = a; temp > total; temp--)
+            {
+                solution *= temp;
+            }
+            return solution;
+        }
+
+        public static int combine(int a, int b)
+        {
+            int total1, total2 = 1, solution = 1;
+
+            total1 = a - b;
+
+            for (int temp1 = a; temp1 > total1; temp1--)
+            {
+                solution *= temp1;
+            }
+            for (int temp2 = b; temp2 > 0; temp2--)
+            {
+                total2 *= temp2;
+            }
+
+            solution /= total2;
+            return solution;
+        }
+    }
+}

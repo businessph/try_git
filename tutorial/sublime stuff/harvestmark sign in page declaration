@@ -1,0 +1,75 @@
+//Assign "Harvest Mark Sign In Page"
+#region "Sign In Page"
+  
+// HarvestMarkSignInLogoImgsrc Id = "/assets/HM-tractor-6af6124f7e026218ae8624c64395371b.png"
+ 
+[FindsBy(How = How.Id, Using = "/assets/HM-tractor-6af6124f7e026218ae8624c64395371b.png")]
+[CacheLookup]
+private IWebElement _HarvestMarkSignInLogoImgsrc;
+ 
+// HarvestMarkSignInLoginAHref Id = "/users/sign_in?locale=en"
+ 
+[FindsBy(How = How.LinkName, Using = "/users/sign_in?locale=en")]
+[CacheLookup]
+private IWebElement _HarvestMarkSignInLoginAhref;
+ 
+// HarvestMarkSignInEmailInput Id = "user_email"
+ 
+[FindsBy(How = How.Id, Using = "user_email")]
+[CacheLookup]
+private IWebElement _HarvestMarkSignInEmailInput;
+
+// HarvestMarkSignInPasswordInput Id = "user_password"
+ 
+[FindsBy(How = How.Id, Using = "user_password")]
+[CacheLookup]
+private IWebElement _HarvestMarkSignInPasswordInput;
+ 
+ // HarvestMarkSignInSignInButton Class = "btn"
+ 
+[FindsBy(How = How.Class, Using = "btn")]
+[CacheLookup]
+private IWebElement _HarvestMarkSignInSignInButton;
+
+// HarvestMarkSignInForgotYourPasswordAHref Id = "/users/password/new?locale=en"
+ 
+[FindsBy(How = How.LinkName, Using = "/users/password/new?locale=en")]
+[CacheLookup]
+private IWebElement _HarvestMarkSignInForgotYourPasswordAHref;
+
+#endregion
+
+//Assign "Companies Page"
+#region "Listing Companies Page"
+  
+// ListingCompaniesHarvestMarkLogoimg scr = "/assets/HM-tractor-6af6124f7e026218ae8624c64395371b.png"
+ 
+[FindsBy(How = How.img src, Using = "/assets/HM-tractor-6af6124f7e026218ae8624c64395371b.png")]
+[CacheLookup]
+private IWebElement _ListingCompaniesHarvestMarkLogoimg;
+ 
+// ListingCompaniesWelcomeAdmin@YottaMarkcomA Href = "http://hqstgror1.yottamark.local/users/edit?locale=en"
+ 
+[FindsBy(How = How.LinkName, Using = "http://hqstgror1.yottamark.local/users/edit?locale=en")]
+[CacheLookup]
+private IWebElement _ListingCompaniesWelcomeAdmin@YottaMarkcomA;
+ 
+// ListingCompaniesSignOutA rel = "/users/sign_out?locale=en"
+ 
+[FindsBy(How = How.LinkName, Using = "/users/sign_out?locale=en")]
+[CacheLookup]
+private IWebElement _ListingCompaniesSignOutA;
+
+// ListingCompaniesHelpSupportA Href = "dropdown-toggle"
+ 
+[FindsBy(How = How.Id, Using = "dropdown-toggle")]
+[CacheLookup]
+private IWebElement _ListingCompaniesHelpSupportA;
+
+// ListingCompaniesContactSupportA Href = "mailto:support@harvestmark.com"
+ 
+[FindsBy(How = How.Id, Using = "mailto:support@harvestmark.com")]
+[CacheLookup]
+private IWebElement _ListingCompaniesContactSupportA;
+
+#endregion
